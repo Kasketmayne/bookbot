@@ -7,3 +7,8 @@ def count_character(book_text: str, character: str) -> int:
     book_text = book_text.lower()
     character = character.lower()
     return book_text.count(character)
+# create function to sort a list of dictionaries by a specific key
+def sort_dict_list(dict_list: list, key: str) -> list:
+    return sorted(dict_list, key=lambda x: x[key])
+
+

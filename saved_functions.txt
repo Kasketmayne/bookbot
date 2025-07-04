@@ -1,0 +1,14 @@
+def count_character(book_text: str, character: str) -> int:
+    book_text = book_text.lower()
+    character = character.lower()
+    return book_text.count(character) 
+
+    characters = ['t', 'p', 'c']
+    for character in characters:
+        num_character = count_character(book_text, character)
+        print(f"'{character}': {num_character}")
+    # list of character counts
+    character_count = [{'character': c, 'count': count_character(book_text, c)}
+                        for c in characters]
+    # sort character counts by count
+    sorted_character_counts = sort_dict_list(character_count, 'count') 
